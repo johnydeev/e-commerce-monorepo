@@ -11,7 +11,8 @@ import cors from "cors";
 const app: Application = express();
 app.use(
     cors({
-        origin: 'http://localhost:5173', // puerto del front
+        origin:
+        'https://e-commerce-monorepo-front.vercel.app/', // puerto del front
         credentials: true,
     }),
 );

@@ -29,7 +29,7 @@ const ProductList = () => {
         const fetchProducts = async () => {
             try {
                 const response = await axios.get(
-                    `${import.meta.env.VITE_API_URL}/api/product`
+                    `${import.meta.env.VITE_URL_API}/api/product`
                 );
                 console.log('Respuesta del backend:', response.data);
                 setProducts(response.data);
