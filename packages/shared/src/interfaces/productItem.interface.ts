@@ -1,6 +1,6 @@
 import { Types } from 'mongoose';
 
-export interface IProductInOrder{
+export interface IProductItem {
     product: Types.ObjectId;
     variant?: Types.ObjectId;
     quantity: number;
