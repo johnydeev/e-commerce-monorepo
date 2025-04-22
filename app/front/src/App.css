@@ -1,0 +1,19 @@
+
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}

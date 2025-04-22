@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "rootDir": "src",
+
+        /* Linting */
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*", "src/**/*.ts"],
+    "exclude": ["./node_modules", "./dist"]
+    
+}
