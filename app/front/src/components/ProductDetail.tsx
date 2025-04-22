@@ -1,27 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { IProductResponse } from '@ecommerce/shared';
 import axios from 'axios';
 import './ProductDetail.css';
 
-interface Product {
-    _id: string;
-    name: string;
-    description: string;
-    images: {
-        url: string;
-        alt: string;
-    }[];
-    price: number;
-    sku: string;
-    status: string;
-    createdAt: string;
-    updatedAt: string;
-    variants: any[];
-}
-
 const ProductDetail = () => {
     const { id } = useParams<{ id: string }>();
-    const [product, setProduct] = useState<Product | null>(null);
+    const [product, setProduct] = useState<IProductResponse | null>(null);
     const [error, setError] = useState<string>('');
 
     useEffect(() => {
@@ -45,7 +30,7 @@ const ProductDetail = () => {
         <div className="product-detail">
             {/* Carrusel de imágenes */}
             <div className="image-carousel">
-                {product.images.map((image, index) => (
+                {product.images?.map((image, index) => (
                     <img
                         key={index}
                         src={image.url}

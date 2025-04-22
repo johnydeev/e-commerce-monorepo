@@ -13,3 +13,7 @@ export interface IProduct {
     status?: "active" | "inactive" | "archived";
     variants?: IProductVariant[];
 }
+
+export interface IProductResponse extends IProduct {
+    _id: string;    
+}

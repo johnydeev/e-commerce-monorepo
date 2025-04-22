@@ -1,28 +1,11 @@
 import { useEffect, useState } from 'react';
+import { IProductResponse } from '@ecommerce/shared';
 import axios from 'axios';
 import ProductCard from './ProductCard';
 import './ProductList.css';
 
-interface Product {
-    _id: string;
-    name: string;
-    description: string;
-    images: [
-        {
-            url: string;
-            alt: string;
-        }
-    ]; // Cambiado a un array de strings para las imágenes
-    price: number;
-    sku: string;
-    status: string;
-    createdAt: string;
-    updatedAt: string;
-    variants: any[];
-}
-
 const ProductList = () => {
-    const [products, setProducts] = useState<Product[]>([]);
+    const [products, setProducts] = useState<IProductResponse[]>([]);
     const [message, setMessage] = useState<string>('');
 
     useEffect(() => {

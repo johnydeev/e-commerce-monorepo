@@ -1,27 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { IProductResponse } from '@ecommerce/shared';
 import './ProductCard.css';
 
-interface Product {
-    _id: string;
-    name: string;
-    description: string;
-    images: [
-        {
-            url: string;
-            alt: string;
-        }
-    ]; // Cambiado a un array de strings para las imágenes
-    price: number;
-    sku: string;
-    status: string;
-    createdAt: string;
-    updatedAt: string;
-    variants: any[];
-    image?: string; // Asegúrate de tener esta propiedad en tu backend también
-}
-
-const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
+const ProductCard: React.FC<{ product: IProductResponse }> = ({ product }) => {
     return (
         <Link to={`/product/${product._id}`} className="product-card">
             <div className="product-card">
