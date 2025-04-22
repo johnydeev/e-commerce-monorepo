@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import productService from "../services/product.service";
-import { IProduct } from "../interfaces/product.interface";
+import { IProduct } from "@ecommerce/shared";
 
 export const createProductController = async (req: Request, res: Response):Promise<void> => {
     try {

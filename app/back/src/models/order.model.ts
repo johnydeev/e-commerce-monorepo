@@ -1,7 +1,7 @@
-import { Document, Schema, model, Types } from "mongoose";
-import { IOrder } from "../interfaces/order.interface";
+import { Document, Schema, model } from "mongoose";
 import { productInOrderSchema } from "./schemas/productInOrder.schema";
 import { guestCustomerSchema } from "./schemas/guestCustomer.schema";
+import { IOrder } from "@ecommerce/shared";
 
 export interface IOrderModel extends IOrder, Document {}
 

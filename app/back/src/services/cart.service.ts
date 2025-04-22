@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { ICart } from "../interfaces/cart.interface";
+import { ICart } from "@ecommerce/shared";
 import cartRepository from "../repositories/cart.repository";
 import ServerError from "../utils/Errors/serverError.util";
 

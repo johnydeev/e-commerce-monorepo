@@ -1,7 +1,6 @@
+import { ICustomer } from "@ecommerce/shared";
 import Customer, { ICustomerModel } from "../models/customer.model";
-import ServerError from "../utils/Errors/serverError.util";
-import { ICustomer } from "../interfaces/customer.interface";
-import { UpdateCustomerDTO } from "../dtos/customer/updateCustomer.dto";
+import { UpdateCustomerDTO } from "@ecommerce/shared/dtos/customer/updateCustomer.dto";
 
 
 class CustomerRepository {

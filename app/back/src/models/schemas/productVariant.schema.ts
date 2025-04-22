@@ -1,6 +1,6 @@
 import { Schema } from "mongoose";
-import { IProductVariant } from "../../interfaces/productVariant.interface";
 import { imageSchema } from "./image.schema";
+import { IProductVariant } from "@ecommerce/shared";
 
 
 export const productVariantSchema = new Schema<IProductVariant>(

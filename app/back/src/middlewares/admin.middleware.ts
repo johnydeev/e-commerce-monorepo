@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { handleError } from "../utils/Errors/handleError.util";
-import { ICustomer } from "../interfaces/customer.interface";
+import { ICustomer } from "@ecommerce/shared";
 import ServerError from "../utils/Errors/serverError.util";
 
 interface AuthenticatedRequest extends Request {

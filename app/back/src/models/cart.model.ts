@@ -1,6 +1,6 @@
 import { Document, Schema, model } from "mongoose";
-import { ICart } from "../interfaces/cart.interface";
 import { productInOrderSchema } from "./schemas/productInOrder.schema";
+import { ICart } from "@ecommerce/shared";
 
 export interface ICartModel extends ICart, Document {}
 

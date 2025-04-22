@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import cartService from "../services/cart.service";
-import { ICart } from "../interfaces/cart.interface";
+import { ICart } from "@ecommerce/shared";
 import { handleError } from "../utils/Errors/handleError.util";
 
 

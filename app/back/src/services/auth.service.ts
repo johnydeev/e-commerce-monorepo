@@ -1,7 +1,8 @@
 import ServerError from "../utils/Errors/serverError.util";
 import jwt from "jsonwebtoken";
 import authRepository from "../repositories/auth.repository";
-import { ICustomer } from "../interfaces/customer.interface";
+import { ICustomer } from "@ecommerce/shared";
+
 
 class AuthService {
     async verifyEmail(verification_token: string): Promise<ICustomer> {

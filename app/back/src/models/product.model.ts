@@ -1,7 +1,7 @@
 import { Document, Schema, model } from "mongoose";
-import { IProduct } from "../interfaces/product.interface";
 import { productVariantSchema } from "./schemas/productVariant.schema";
 import { imageSchema } from "./schemas/image.schema";
+import { IProduct } from "@ecommerce/shared";
 
 // Se extiende la interfaz IProduct para que se respete la firma de la entidad y 
 // Document para que tenga _id, createAt, updateAt por defecto y demás propiedades de Mongoose.

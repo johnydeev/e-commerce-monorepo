@@ -1,5 +1,6 @@
+import { ICustomer } from "@ecommerce/shared";
 import { Document, Schema, model } from "mongoose";
-import { ICustomer } from "../interfaces/customer.interface";
+
 
 // Se extiende la interfaz ICustomer para que se respete la firma de la entidad y 
 // Document para que tenga _id, createAt, updateAt por defecto y demás propiedades de Mongoose.

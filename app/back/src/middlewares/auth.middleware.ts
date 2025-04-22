@@ -2,9 +2,9 @@ import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import { handleError } from "../utils/Errors/handleError.util";
 import ENVIRONMENT from "../config/environment.config";
-import { ICustomer } from "../interfaces/customer.interface";
+import { ICustomer } from "@ecommerce/shared";
 import customerService from "../services/customer.service";
-import { JwtPayload } from "../interfaces/jwtpayload";
+import { jwtPayload } from "@ecommerce/shared";
 import ServerError from "../utils/Errors/serverError.util";
 // Importamos la interfaz extendida
 
@@ -38,7 +38,7 @@ export const AuthMiddleware = async (
         const decoded = jwt.verify(
             token,
             ENVIRONMENT.SECRET_KEY_JWT
-        ) as JwtPayload;
+        ) as jwtPayload;
 
         // Accedemos a las nuevas propiedades, por ejemplo:
         console.log(decoded.email); // email del cliente

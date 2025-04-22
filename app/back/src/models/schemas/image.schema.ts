@@ -1,5 +1,7 @@
+
+import { IImage } from "@ecommerce/shared";
 import { Schema } from "mongoose";
-import { IImage } from "../../interfaces/image.interface";
+
 
 export const imageSchema = new Schema<IImage>(
     {

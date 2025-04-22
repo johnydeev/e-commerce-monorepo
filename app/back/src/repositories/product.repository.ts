@@ -1,4 +1,5 @@
-import { IProduct } from "../interfaces/product.interface";
+
+import { IProduct } from "@ecommerce/shared";
 import Product, { IProductModel } from "../models/product.model";
 
 class ProductRepository {

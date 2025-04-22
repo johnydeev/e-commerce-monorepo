@@ -43,12 +43,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
                             {product.status}
                         </span>
                     </div>
-                    <p className="timestamps">
-                        Creado: {new Date(product.createdAt).toLocaleDateString()}
-                    </p>
-                    <p className="timestamps">
-                        Actualizado: {new Date(product.updatedAt).toLocaleDateString()}
-                    </p>
+                    
                     <div className="product-card__button">
                         Ver más
                     </div>

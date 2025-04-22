@@ -1,5 +1,6 @@
 import { Types } from "mongoose";
-import { IOrder } from "../interfaces/order.interface";
+
+import { IOrder } from "@ecommerce/shared";
 import Order from "../models/order.model";
 import orderRepository from "../repositories/order.repository";
 import ServerError from "../utils/Errors/serverError.util";

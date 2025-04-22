@@ -1,5 +1,5 @@
+import { IColor } from "@ecommerce/shared";
 import { Document, Schema, model } from "mongoose";
-import { IColor } from "../interfaces/color.interface";
 
 export interface IColorModel extends IColor, Document {}
 

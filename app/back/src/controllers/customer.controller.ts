@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import customerService from "../services/customer.service";
-import { ICustomer } from "../interfaces/customer.interface";
 import { AuthenticatedRequest } from "../middlewares/auth.middleware";
+import { ICustomer } from "@ecommerce/shared";
 
 export const createCustomerController = async (
     req: AuthenticatedRequest, // Usamos AuthenticatedRequest para que 'customer' esté disponible

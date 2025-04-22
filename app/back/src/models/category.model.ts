@@ -1,6 +1,6 @@
 import { Document, Schema, model } from "mongoose";
-import { ICategory } from "../interfaces/category.interface";
 import { imageSchema } from "./schemas/image.schema";
+import { ICategory } from "@ecommerce/shared";
 
 export interface ICategoryModel extends ICategory,Document {}
 

@@ -1,5 +1,6 @@
+import { ISize } from "@ecommerce/shared";
 import { Document, Schema, model } from "mongoose";
-import { ISize } from "../interfaces/size.interface";
+
 
 export interface ISizeModel extends ISize, Document {}
 

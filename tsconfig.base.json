@@ -1,8 +1,15 @@
 {
-    "compilerOptions": {      
+    "compilerOptions": {
         "strict": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true
+    },
+    "baseUrl": ".",
+    "paths": {
+        "@ecommerce/shared": [
+            "../../packages/shared/src"
+        ]
     }
+    
 }

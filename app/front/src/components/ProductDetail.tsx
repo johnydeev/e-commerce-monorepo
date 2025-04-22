@@ -56,15 +56,13 @@ const ProductDetail = () => {
             </div>
 
             <div className="detail-info">
-                <h1>{product.name}</h1>
+                <div className='product-header'>
+                    <h1>{product.name}</h1>
+                    <span className={`status ${product.status}`}>{product.status}</span>  
+                </div>
                 <p className="sku">SKU: {product.sku}</p>
                 <p className="description">{product.description}</p>
                 <p className="price">${product.price.toFixed(2)}</p>
-                <span className={`status ${product.status}`}>{product.status}</span>
-                <div className="timestamps">
-                    <p>Creado: {new Date(product.createdAt).toLocaleDateString()}</p>
-                    <p>Actualizado: {new Date(product.updatedAt).toLocaleDateString()}</p>
-                </div>
             </div>
         </div>
     );

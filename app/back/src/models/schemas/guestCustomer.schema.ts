@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import { IGuestCustomer } from "../../interfaces/customer.interface";
+import { IGuestCustomer } from '@ecommerce/shared';
 
 export const guestCustomerSchema = new Schema<IGuestCustomer>(
     {

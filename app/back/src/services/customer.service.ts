@@ -1,12 +1,12 @@
 import { Types } from "mongoose";
 import customerRepository from "../repositories/customer.repository";
-import { ICustomer } from "../interfaces/customer.interface";
+import { ICustomer } from "@ecommerce/shared";
 import ServerError from "../utils/Errors/serverError.util";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import sendEmail from "../utils/sendEmail/sendEmail.util";
-import { CreateCustomerDTO } from "../dtos/customer/createCustomer.dto";
-import { UpdateCustomerDTO } from "../dtos/customer/updateCustomer.dto";
+import { CreateCustomerDTO } from "@ecommerce/shared/dtos/customer/createCustomer.dto";
+import { UpdateCustomerDTO } from "@ecommerce/shared/dtos/customer/updateCustomer.dto";
 
 
 class CustomerService {

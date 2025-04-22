@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { IProduct } from "../interfaces/product.interface";
+import { IProduct } from "@ecommerce/shared";
 import productRepository from "../repositories/product.repository";
 import ServerError from "../utils/Errors/serverError.util";
 import { IProductModel } from "../models/product.model";

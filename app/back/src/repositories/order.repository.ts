@@ -1,6 +1,5 @@
 import Order, { IOrderModel } from "../models/order.model";
 
-
 class OrderRepository {
     // Buscar una orden por su ID
     async findById(orderId: string) {
