@@ -2,7 +2,12 @@
 import { FaShoppingCart } from 'react-icons/fa';
 import './Navbar.css';
 
-const Navbar = () => {
+interface NavbarProps {
+    searchTerm: string;
+    setSearchTerm: (term: string) => void;
+}
+
+const Navbar = ({ searchTerm, setSearchTerm }: NavbarProps) => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
@@ -10,7 +15,12 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-search">
-                <input type="text" placeholder="Buscar productos..." />
+                <input
+                    type="text"
+                    placeholder="Buscar productos..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
             </div>
 
             <div className="navbar-cart">
@@ -21,3 +31,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

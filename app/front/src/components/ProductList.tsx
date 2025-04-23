@@ -1,10 +1,15 @@
+// src/components/ProductList.tsx
 import { useEffect, useState } from 'react';
 import { IProductResponse } from '@ecommerce/shared';
 import axios from 'axios';
 import ProductCard from './ProductCard';
 import './ProductList.css';
 
-const ProductList = () => {
+interface Props {
+    searchTerm: string;
+}
+
+const ProductList = ({ searchTerm }: Props) => {
     const [products, setProducts] = useState<IProductResponse[]>([]);
     const [message, setMessage] = useState<string>('');
 
@@ -14,7 +19,6 @@ const ProductList = () => {
                 const response = await axios.get(
                     `${import.meta.env.VITE_URL_API}/api/product`
                 );
-                console.log('Respuesta del backend:', response.data);
                 setProducts(response.data);
             } catch (error) {
                 console.error('Error al conectar con el backend', error);
@@ -25,17 +29,21 @@ const ProductList = () => {
         fetchProducts();
     }, []);
 
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
         <div className="product-list-container">
             <h2 className="product-list-title">Productos Disponibles</h2>
             {message && <p className="product-list-error">{message}</p>}
             <div className="product-grid">
-                {products.length > 0 ? (
-                    products.map((product) => (
+                {filteredProducts.length > 0 ? (
+                    filteredProducts.map(product => (
                         <ProductCard key={product._id} product={product} />
                     ))
                 ) : (
-                    <p className="product-list-empty">No hay productos disponibles.</p>
+                    <p className="product-list-empty">No se encontraron productos.</p>
                 )}
             </div>
         </div>
@@ -43,6 +51,8 @@ const ProductList = () => {
 };
 
 export default ProductList;
+
+
 
 
 //--------------------------------------------------------------------------------------------------
