@@ -8,6 +8,7 @@ interface EnvVars {
     SECRET_KEY_JWT: string;
     URL_FRONTEND?: string;
     URL_BACKEND?: string;
+    MP_ACCES_TOKEN?: string;
 }
 
 dotenv.config();
@@ -20,6 +21,7 @@ const ENVIRONMENT: EnvVars = {
     SECRET_KEY_JWT: process.env.SECRET_KEY_JWT!,
     URL_FRONTEND: process.env.URL_FRONTEND!,
     URL_BACKEND: process.env.URL_BACKEND!,
+    MP_ACCES_TOKEN: process.env.MP_ACCES_TOKEN!,
 };
 
 for (let key in ENVIRONMENT) {

@@ -1,8 +1,7 @@
-import { IProductInOrder } from "@ecommerce/shared";
+import { IProductItem } from "@ecommerce/shared";
 import { Schema } from "mongoose";
 
-
-export const productInOrderSchema = new Schema<IProductInOrder>(
+export const productInOrderSchema = new Schema<IProductItem>(
     {
         product: {
             type: Schema.Types.ObjectId,

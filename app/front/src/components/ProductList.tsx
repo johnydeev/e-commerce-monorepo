@@ -44,3 +44,55 @@ const ProductList = () => {
 
 export default ProductList;
 
+
+//--------------------------------------------------------------------------------------------------
+// import { useEffect, useState } from 'react';
+// import axios from 'axios';
+// import { useLocation } from 'react-router-dom';
+// import { IProductResponse } from '@ecommerce/shared';
+
+// const ProductList = () => {
+//     const [products, setProducts] = useState<IProductResponse[]>([]);
+//     const [loading, setLoading] = useState(true);
+//     const location = useLocation();
+//     const searchParams = new URLSearchParams(location.search);
+//     const query = searchParams.get('q')?.toLowerCase() || '';
+
+//     useEffect(() => {
+//         const fetchProducts = async () => {
+//             try {
+//                 const res = await axios.get(`${import.meta.env.VITE_URL_API}/api/product`);
+//                 const data: IProductResponse[] = res.data;
+
+//                 if (query) {
+//                     setProducts(data.filter(p => p.name.toLowerCase().includes(query)));
+//                 } else {
+//                     setProducts(data);
+//                 }
+//             } catch (err) {
+//                 console.error('Error al cargar productos', err);
+//             } finally {
+//                 setLoading(false);
+//             }
+//         };
+
+//         fetchProducts();
+//     }, [query]);
+
+//     if (loading) return <p>Cargando productos...</p>;
+
+//     return (
+//         <div className="product-list">
+//             {products.map(p => (
+//                 <div key={p._id} className="product-card">
+//                     <h3>{p.name}</h3>
+//                     <p>${p.price.toFixed(2)}</p>
+//                     {/* Link al detalle o más info */}
+//                 </div>
+//             ))}
+//         </div>
+//     );
+// };
+
+// export default ProductList;
+

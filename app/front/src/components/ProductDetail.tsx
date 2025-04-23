@@ -8,6 +8,32 @@ const ProductDetail = () => {
     const { id } = useParams<{ id: string }>();
     const [product, setProduct] = useState<IProductResponse | null>(null);
     const [error, setError] = useState<string>('');
+    const [quantity, setQuantity] = useState(1);
+
+    const addToCart = (item: { productId: string; quantity: number; price: number }) => {
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const updatedCart = [...cart, item];
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        alert('Producto agregado al carrito!');
+    };
+
+    const handleAddToCart = () => {
+
+        if(!product) return;
+        if (quantity < 1) {
+            alert('La cantidad debe ser al menos 1.');
+            return;
+        }
+        const item = {
+            productId: product?._id,
+            quantity,
+            price: product?.price,
+            // variantId: selectedVariantId || null,
+        };
+
+        // Aquí podrías llamar a una función que guarde en localStorage o contexto
+        addToCart(item);
+    };
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -48,6 +74,21 @@ const ProductDetail = () => {
                 <p className="sku">SKU: {product.sku}</p>
                 <p className="description">{product.description}</p>
                 <p className="price">${product.price.toFixed(2)}</p>
+                <div className="cart-controls">
+                    <label htmlFor="quantity" className="quantity-label">Cantidad:</label>
+                    <input
+                        id="quantity"
+                        type="number"
+                        min="1"
+                        value={quantity}
+                        onChange={(e) => setQuantity(Number(e.target.value))}
+                        className="quantity-input"
+                    />
+                    <button className="add-to-cart-btn" onClick={handleAddToCart}>
+                        Agregar al carrito
+                    </button>
+                </div>
+
             </div>
         </div>
     );

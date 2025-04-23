@@ -50,6 +50,7 @@
   "license": "ISC",
   "packageManager": "npm@10.2.3",
   "dependencies": {
-    "@ecommerce/shared": "^1.0.0"
+    "@ecommerce/shared": "^1.0.0",
+    "react-icons": "^5.5.0"
   }
 }
