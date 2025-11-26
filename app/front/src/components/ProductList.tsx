@@ -10,21 +10,21 @@ interface Props {
 }
 
 const ProductList = ({ searchTerm }: Props) => {
-    const [products, setProducts] = useState<IProductResponse[]>([]);
-    const [message, setMessage] = useState<string>('');
+    const [products, setProducts] = useState<IProductResponse[]>([])
+    const [message, setMessage] = useState<string>('')
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
                 const response = await axios.get(
                     `${import.meta.env.VITE_URL_API}/api/product`
-                );
-                setProducts(response.data);
+                )
+                setProducts(response.data)
             } catch (error) {
-                console.error('Error al conectar con el backend', error);
+                console.error('Error al conectar con el backend', error)
                 setMessage('Error al conectar con el backend');
             }
-        };
+        }
 
         fetchProducts();
     }, []);
