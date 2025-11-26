@@ -5,7 +5,7 @@ import './ProductCard.css';
 
 const ProductCard: React.FC<{ product: IProductResponse }> = ({ product }) => {
     return (
-        <Link to={`/product/${product._id}`} className="product-card">
+        <Link to={`/product/${product._id}`}>
             <div className="product-card">
 
                 {product.images && product.images.length > 0 && (

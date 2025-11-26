@@ -4,6 +4,36 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+:root {
+  /* Proporción Áurea */
+  --golden-ratio: 1.618;
+
+  /* Breakpoints */
+
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 620px;
+  --breakpoint-md: 1000px;
+  --breakpoint-lg: 1618px;
+  
+
+  /* Gaps */
+  --gap-base: 24px;
+  --gap-sm: calc(var(--gap-base) / var(--golden-ratio)); /* 24px / 1.618 ≈ 14.81px */
+  --gap-md: calc(var(--gap-base) * var(--golden-ratio)); /* 24px * 1.618 ≈ 38.83px */
+  --gap-lg: calc(var(--gap-base) * var(--golden-ratio) * var(--golden-ratio)); /* 24px * 1.618^2 ≈ 62.25px */
+
+  /* Paddings */
+  --padding-base: 24px;
+  --padding-lg: calc(var(--padding-base) * var(--golden-ratio)); /* 24px * 1.618 ≈ 38.83px */
+
+  /* Column Sizes */
+  --min-column-width: 250px;
+  --max-column-width: calc(var(--min-column-width) * var(--golden-ratio)); /* ≈ 404px */
+  /* Cards Sizes */
+  --card-min-height: calc(260px * var(--golden-ratio));
+}
+
+
 body {
   background-color: #f9fafb;
   min-height: 100vh;
