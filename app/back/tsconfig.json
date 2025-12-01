@@ -6,10 +6,17 @@
         "moduleResolution": "node",
         "outDir": "dist",
         "rootDir": "src",
+        "types": ["node"],
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "strict": true,
 
         /* Linting */
         "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true
     },
     "include": ["src/**/*", "src/**/*.ts"],
     "exclude": ["./node_modules", "./dist"]

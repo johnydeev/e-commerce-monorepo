@@ -3,13 +3,11 @@
         "strict": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "resolveJsonModule": true
     },
     "baseUrl": ".",
     "paths": {
-        "@ecommerce/shared": [
-            "../../packages/shared/src"
-        ]
+        "@ecommerce/shared": ["../../packages/shared/src"]
     }
-    
 }
