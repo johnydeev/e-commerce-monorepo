@@ -18,16 +18,27 @@ const ProductList = ({ searchTerm }: Props) => {
             try {
                 const response = await axios.get(
                     `${import.meta.env.VITE_URL_API}/api/product`
-                )
-                setProducts(response.data)
+                );
+
+                const data = response.data;
+
+                if (Array.isArray(data)) {
+                    setProducts(data);
+                } else {
+                    console.error("⚠️ Backend returned non-array:", data);
+                    setProducts([]);
+                    setMessage("Error: respuesta inesperada del servidor.");
+                }
+
             } catch (error) {
-                console.error('Error al conectar con el backend', error)
-                setMessage('Error al conectar con el backend');
+                console.error("Error al conectar con el backend", error);
+                setMessage("Error al conectar con el backend");
             }
-        }
+        };
 
         fetchProducts();
     }, []);
+
 
     const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(searchTerm.toLowerCase())
