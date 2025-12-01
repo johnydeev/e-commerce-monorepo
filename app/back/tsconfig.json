@@ -8,12 +8,8 @@
         "rootDir": "src",
         "types": ["node"],
         "allowSyntheticDefaultImports": true,
-        "resolveJsonModule": true,
-        "strict": true,
 
         /* Linting */
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
         "noUnusedLocals": true,
         "noUnusedParameters": false,
         "noFallthroughCasesInSwitch": true
