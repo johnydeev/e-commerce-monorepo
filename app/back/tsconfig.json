@@ -15,6 +15,14 @@
         "noFallthroughCasesInSwitch": true
     },
     "include": ["src/**/*", "src/**/*.ts"],
-    "exclude": ["./node_modules", "./dist"]
+    "exclude": ["./node_modules", "./dist"],
+    "baseUrl": "./src",
+    "paths": {
+        "@utils/*": ["utils/*"],
+        "@controllers/*": ["controllers/*"],
+        "@services/*": ["services/*"],
+        "@routes/*": ["routes/*"],
+        "@models/*": ["models/*"]
+    }
     
 }
