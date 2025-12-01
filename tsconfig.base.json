@@ -5,9 +5,5 @@
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true,
         "resolveJsonModule": true
-    },
-    "baseUrl": ".",
-    "paths": {
-        "@ecommerce/shared": ["../../packages/shared/src"]
-    }
+    },    
 }
