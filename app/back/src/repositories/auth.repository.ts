@@ -1,6 +1,6 @@
 import { ICustomerModel } from "../models/customer.model";
 import Customer from "../models/customer.model";
-import ServerError from "../utils/Errors/serverError.util";
+// import ServerError from "../utils/Errors/serverError.util";
 
 class AuthRepository {
 

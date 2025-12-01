@@ -1,4 +1,4 @@
-import nodemailer, { Transporter, createTransport } from "nodemailer";
+import nodemailer, { Transporter } from "nodemailer";
 import ENVIRONMENT from "./environment.config";
 
 const transporter: Transporter = nodemailer.createTransport({
