@@ -13,7 +13,7 @@ app.use(
     cors({
         origin: [
         'http://localhost:5173',
-        'https://e-commerce-monorepo-front.vercel.app',
+        'https://e-commerce-monorepo-fullstack.vercel.app',
         ],
         credentials: true,
     }),
